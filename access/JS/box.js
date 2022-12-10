@@ -56,7 +56,7 @@ xhr.onreadystatechange = function () {
     }
 }
 xhr.send();
-
+// pjax
 $(function () {
     $(document).pjax('#pjax-a', '#main',
         {

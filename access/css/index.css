@@ -7,7 +7,7 @@
 
 body {
     background-image: url(//catbox.moe/bgs/texture3.png);
-    font-family: "sjjiqianbi";
+    font-family: sjjiqianbi, Helvetica, Arial, sans-serif;
 }
 
 .page-bj {
@@ -42,13 +42,12 @@ body {
     outline: 1px solid rgba(255, 161, 19, 0.544);
 }
 
+.rin-card-content {
+    font-size: 12px;
+}
 
 #footer {
     text-align: center;
-}
-
-.rin-card-content {
-    font-size: 12px;
 }
 
 #footer .rin-card-content {
@@ -141,50 +140,34 @@ body {
     margin: -10px;
 }
 
-.wfziimg-1 {
+.wfziimg-z {
     pointer-events: none;
     position: fixed;
-    animation-name: top1;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
     animation-delay: 1s;
     animation-fill-mode: forwards;
+}
+
+.wfziimg-1 {
+    animation-name: top1;
 }
 
 .wfziimg-2 {
-    pointer-events: none;
-    position: fixed;
     animation-name: top2;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
 }
 
 .wfziimg-3 {
-    pointer-events: none;
-    position: fixed;
     animation-name: top3;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
 }
 
 .wfziimg-4 {
-    pointer-events: none;
-    position: fixed;
     animation-name: top4;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
 }
 
 .wfziimg-xx {
     margin-top: -20px;
 }
-
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes top1 {
