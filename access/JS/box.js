@@ -56,13 +56,6 @@ xhr.onreadystatechange = function () {
     }
 }
 xhr.send();
-function tabiszd() { //tab组件监听重载
-    var $ = mdui.$;
-    var inst = new mdui.Tab('[mdui-tab]');
-    $('[mdui-tab]').on('change.mdui.tab', function (event) {
-        console.log('event: change; tab: ' + event._detail.index);
-    });
-}
 
 $(function () {
     $(document).pjax('#pjax-a', '#main',
@@ -82,13 +75,14 @@ $(function () {
         .on(
             'pjax:end', NProgress.done
         );
-    showTime();
+    // showTime();
     $(document).on('ready pjax:end', function (event) {
         $(event.target).fetch()
     })
 })
-// 重载入
-document.addEventListener('pjax:complete', function () {
-    // 需要重载的 JS 函数
-    tabiszd();
-});
+// 通过 JavaScript 调用tab
+var tab = new mdui.Tab('#tab');
+// 重载函数
+$(document).addEventListener('pjax:complete', function () {
+    mdui.Tab('#tab');
+})

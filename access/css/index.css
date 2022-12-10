@@ -1,6 +1,13 @@
+@font-face {
+    font-family: 'sjjiqianbi';
+    src: url('/font/sjjiqianbi.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-image: url(//catbox.moe/bgs/texture3.png);
-    font-family: "Helvetica";
+    font-family: "sjjiqianbi";
 }
 
 .page-bj {
@@ -31,8 +38,8 @@ body {
 }
 
 .rin-card-xuxmbiankuang {
-    border-radius: 25px;
-    border: 1px dashed rgb(255, 186, 101);
+    border: 2px dashed rgb(255, 186, 101);
+    outline: 1px solid rgba(255, 161, 19, 0.544);
 }
 
 
@@ -56,8 +63,13 @@ body {
     text-decoration: none;
 }
 
+.help-tab {
+    height: 40px;
+}
+
 #last {
     text-align: center;
+    margin-top: 10px;
 }
 
 .rin-card-title {
@@ -114,9 +126,11 @@ body {
 }
 
 .uhbmkl {
-    border: rgb(255, 186, 101) 1px dashed;
-    height: 45px;
-    border-radius: 10px;
+    border: rgb(255, 186, 101) 2px dashed;
+    outline: 1px solid rgba(255, 184, 52, 0.48);
+    height: 35px;
+    border-radius: 5px;
+    background-image: url(https://files.catbox.moe/qlbpqq.png);
 }
 
 .wfziimg {
