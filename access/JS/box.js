@@ -1,57 +1,25 @@
-$(function () {
-    /**
-     * 方式一 按钮父节点监听事件
-     *
-     * @param selector  触发点击事件的按钮
-     * @param container 展示刷新内容的容器，也就是会被替换的部分
-     * @param options   参数
-     */
-    // pjax
-    $(document).pjax('#pjax-a', '#main',
-        {
-            fragment: '#main',
-            timeout: 8000
-        });
-    $(document)
-        .on(
-            'pjax:start', NProgress.start
-        )
-        .on(
-            'pjax:end', NProgress.done
-        );
-    showTime();
-    $(document).on('ready pjax:end', function (event) {
-        $(event.target).fetch()
-    })
+// 页面切换JS
+function Eushully() {
+    var home = document.getElementById("qq");
+    home.src = "https://jq.qq.com/?_wv=1027&k=eS6p0I8R";
+}
+function Lass() {
+    var home = document.getElementById("qq");
+    home.src = "https://jq.qq.com/?_wv=1027&k=VEQ0f6P9";
+}
+function pbdc() {
+    var netdisk = document.getElementById("qq");
+    netdisk.src = "https://pd.qq.com/s/o541j6";
+}
+function help() {
+    var help = document.getElementById("qq");
+    help.src = "/helpqphr.html";
+}
+function ks() {
+    var help = document.getElementById("qq");
+    help.src = "";
+}
 
-})
-$(function () {
-    /**
-     * 方式一 按钮父节点监听事件
-     *
-     * @param selector  触发点击事件的按钮
-     * @param container 展示刷新内容的容器，也就是会被替换的部分
-     * @param options   参数
-     */
-    // pjax
-    $(document).pjax('#pjax-b', '#helpmain',
-        {
-            fragment: '#helpmain',
-            timeout: 8000
-        });
-    $(document)
-        .on(
-            'pjax:start', NProgress.start
-        )
-        .on(
-            'pjax:end', NProgress.done
-        );
-    showTime();
-    $(document).on('ready pjax:end', function (event) {
-        $(event.target).fetch()
-    })
-
-})
 // iframe加载动画
 function stateChangeIE(_frame) {
     if (_frame.readyState == "interactive") {
@@ -69,10 +37,7 @@ function stateChangeFirefox(_frame) {
     loader.style.display = "none";
     _frame.style.visibility = "visible";
 }
-
 // 回到顶部
-
-
 window.onscroll = function () {
     var currentHeight =
         document.documentElement.scrollTop ||
@@ -85,7 +50,6 @@ window.onscroll = function () {
         document.getElementById('backtop').style.display = 'none'
     }
 }
-
 function scrollToTop() {
     var topHeight =
         document.documentElement.scrollTop ||
@@ -102,25 +66,72 @@ function scrollToTop() {
     }
 }
 function scrollLis() {
-
     var toTop = offs.top - $(window).scrollTop();
-
     if (toTop == 0 || toTop < 0) {
-
         if (!$('#fixed').hasClass('ab')) $('#fixed').addClass('ab');
-
     } else {
-
         $('#fixed').removeClass('ab');
-
     }
+}
+var offs = $('#fixed').offset();
+$(window).scroll(function () {
+    scrollLis();
+});
+
+// 一言
+var xhr = new XMLHttpRequest();
+xhr.open('get', 'https://v1.hitokoto.cn');
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+        var data = JSON.parse(xhr.responseText);
+        var hitokoto = document.getElementById('hitokoto_text');
+        hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+        hitokoto.innerText = data.hitokoto;
+    }
+}
+xhr.send();
+function tab() { //tab组件监听重载
 
 }
 
-var offs = $('#fixed').offset();
-
-$(window).scroll(function () {
-
-    scrollLis();
-
+$(function () {
+    $(document).pjax('#pjax-a', '#main',
+        {
+            fragment: '#main',
+            timeout: 8000
+        });
+    $(document)
+        .on(
+            'pjax:start', NProgress.start
+        )
+        .on(
+            'pjax:end', NProgress.done
+        );
+    showTime();
+    $(document).on('ready pjax:end', function (event) {
+        $(event.target).fetch()
+    })
+})
+$(function () {
+    $(document).pjax('#pjax-b', '#helpmain',
+        {
+            fragment: '#helpmain',
+            timeout: 8000
+        });
+    $(document)
+        .on(
+            'pjax:start', NProgress.start
+        )
+        .on(
+            'pjax:end', NProgress.done
+        )
+    showTime();
+    $(document).on('ready pjax:end', function (event) {
+        $(event.target).fetch()
+    })
+})
+// 重载入
+document.addEventListener('pjax:complete', function () {
+    // 需要重载的 JS 函数
+    tab();
 });
