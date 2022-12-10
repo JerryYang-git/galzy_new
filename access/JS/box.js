@@ -1,25 +1,3 @@
-// 页面切换JS
-function Eushully() {
-    var home = document.getElementById("qq");
-    home.src = "https://jq.qq.com/?_wv=1027&k=eS6p0I8R";
-}
-function Lass() {
-    var home = document.getElementById("qq");
-    home.src = "https://jq.qq.com/?_wv=1027&k=VEQ0f6P9";
-}
-function pbdc() {
-    var netdisk = document.getElementById("qq");
-    netdisk.src = "https://pd.qq.com/s/o541j6";
-}
-function help() {
-    var help = document.getElementById("qq");
-    help.src = "/helpqphr.html";
-}
-function ks() {
-    var help = document.getElementById("qq");
-    help.src = "";
-}
-
 // iframe加载动画
 function stateChangeIE(_frame) {
     if (_frame.readyState == "interactive") {
