@@ -43,18 +43,6 @@ function scrollToTop() {
         scrolldelay = null;
     }
 }
-function scrollLis() {
-    var toTop = offs.top - $(window).scrollTop();
-    if (toTop == 0 || toTop < 0) {
-        if (!$('#fixed').hasClass('ab')) $('#fixed').addClass('ab');
-    } else {
-        $('#fixed').removeClass('ab');
-    }
-}
-var offs = $('#fixed').offset();
-$(window).scroll(function () {
-    scrollLis();
-});
 
 // 一言
 var xhr = new XMLHttpRequest();
@@ -68,10 +56,10 @@ xhr.onreadystatechange = function () {
     }
 }
 xhr.send();
-function tab() { //tab组件监听重载
+function tabiszd() { //tab组件监听重载
     var $ = mdui.$;
-    var inst = new mdui.Tab('#tab');
-    $('#tab').on('change.mdui.tab', function (event) {
+    var inst = new mdui.Tab('[mdui-tab]');
+    $('[mdui-tab]').on('change.mdui.tab', function (event) {
         console.log('event: change; tab: ' + event._detail.index);
     });
 }
@@ -80,6 +68,11 @@ $(function () {
     $(document).pjax('#pjax-a', '#main',
         {
             fragment: '#main',
+            timeout: 8000
+        });
+    $(document).pjax('#pjax-b', '#helpmain',
+        {
+            fragment: '#helpmain',
             timeout: 8000
         });
     $(document)
@@ -94,26 +87,8 @@ $(function () {
         $(event.target).fetch()
     })
 })
-$(function () {
-    $(document).pjax('#pjax-b', '#helpmain',
-        {
-            fragment: '#helpmain',
-            timeout: 8000
-        });
-    $(document)
-        .on(
-            'pjax:start', NProgress.start
-        )
-        .on(
-            'pjax:end', NProgress.done
-        )
-    showTime();
-    $(document).on('ready pjax:end', function (event) {
-        $(event.target).fetch()
-    })
-})
 // 重载入
 document.addEventListener('pjax:complete', function () {
     // 需要重载的 JS 函数
-    tab();
+    tabiszd();
 });
