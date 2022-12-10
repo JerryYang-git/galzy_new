@@ -69,7 +69,11 @@ xhr.onreadystatechange = function () {
 }
 xhr.send();
 function tab() { //tab组件监听重载
-
+    var $ = mdui.$;
+    var inst = new mdui.Tab('#tab');
+    $('#tab').on('change.mdui.tab', function (event) {
+        console.log('event: change; tab: ' + event._detail.index);
+    });
 }
 
 $(function () {
