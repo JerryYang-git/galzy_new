@@ -56,6 +56,8 @@ xhr.onreadystatechange = function () {
     }
 }
 xhr.send();
+
+
 // pjax
 $(function () {
     $(document).pjax('#pjax-a', '#main',
@@ -80,9 +82,11 @@ $(function () {
         $(event.target).fetch()
     })
 })
+
 // 通过 JavaScript 调用tab
+console.log();
 var tab = new mdui.Tab('#tab');
-// 重载函数
+// pjax后重载函数
 $(document).addEventListener('pjax:complete', function () {
-    mdui.Tab('#tab');
+    tab();
 })
