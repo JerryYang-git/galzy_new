@@ -82,13 +82,30 @@ $(function () {
     })
 })
 
+// 灯箱初始化
+function lightGalleryiuui() {
+    lightGallery(document.getElementById('lightgallery'), {
+        plugins: [lgZoom, lgThumbnail],
+        licenseKey: 'your_license_key',
+        speed: 500,
+        // ... other settings
+    });
+    lightGallery(document.getElementById('selector1'), {
+        selector: '.item',
+        selector: '.item2',
+    });
+}
 
 // 通过 JavaScript 调用tab组件
 function pjax_reload() {
     var tab = new mdui.Tab('#tab');
+    var tab2 = new mdui.Tab('#tab2');
+    var Panel = new mdui.Panel('#mdui-panel');
 }
 pjax_reload();
+lightGalleryiuui();
 // pjax后重载
 $(document).on('pjax:complete', function () {
     pjax_reload();
+    lightGalleryiuui();
 });

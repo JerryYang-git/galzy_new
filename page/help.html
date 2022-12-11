@@ -10,8 +10,13 @@
     <link rel="icon" href="//files.catbox.moe/5r4yu5.ico">
     <title>紫缘社|下载常见问题</title>
     <link rel="stylesheet" href="//cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" />
-    <link rel="stylesheet" href="/access/css/index.css">
+    <link rel="stylesheet" href="/access/css/index.min.css">
     <link rel="stylesheet" href="//cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css">
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lightgallery/2.7.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lightgallery/2.7.0/css/lg-zoom.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lightgallery/2.7.0/css/lg-thumbnail.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lightgallery/2.7.0/css/lightgallery-bundle.min.css">
 </head>
 
 <body class="mdui-theme-primary-orange">
@@ -42,58 +47,93 @@
                     <div class="mdui-typo">
                         <div>
                             <h1 id="_1">下载常见问题</h1>
-                            <h3 id="_4">建议</h3>
-                            <div class="mdui-shadow-2 mdui-p-a-2">
-                                <p>手机端建议使用idm自带浏览器，<strong>省事</strong><br>
-                                    下载不要使用右方<i class="mdui-icon material-icons">&#xe14d;</i>按钮，会有几率出现服务器禁止访问</p>
-                                <p>虽然多线程下载带来的速度提升卓为显著，但顾名思义使用了很多线程，请不要使用超过8个线程下载本站及其他同类站，避免造成资源浪费</p>
-                            </div>
-                            <h2 id="_2">下载拒绝访问、需要验证等</h2>
-                            <div class="mdui-shadow-2 mdui-p-a-2">
-                                <p>可尝试更新下载链接，下方视频（若视频无法打开，请挂代理及不要使用QQ浏览器）</p>
-                                <div class="mdui-tab" mdui-tab>
-                                    <a href="#example1-pe1" class="mdui-ripple">电脑</a>
-                                    <a href="#example1-pe2" class="mdui-ripple">手机</a>
+
+
+                            <div class="mdui-panel mdui-panel-gapless mdui-panel-popout" id="mdui-panel">
+
+                                <div class="mdui-panel-item mdui-panel-item-open">
+                                    <div class="mdui-panel-item-header">
+                                        <div class="mdui-typo-title">建议</div>
+                                        <i
+                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                    </div>
+                                    <div class="mdui-panel-item-body">
+                                        <p>手机端建议使用idm自带浏览器，<strong>省事</strong><br>
+                                            下载不要使用右方<i class="mdui-icon material-icons">&#xe14d;</i>按钮，会有几率出现服务器禁止访问</p>
+                                        <p>虽然多线程下载带来的速度提升卓为显著，但顾名思义使用了很多线程，请不要使用超过8个线程下载本站及其他同类站，避免造成资源浪费</p>
+                                    </div>
                                 </div>
 
-                                <div id="example1-pe1" class="mdui-p-a-2">
-                                    <video class="mdui-video-fluid imgziuiyk" controls=""
-                                        src="https://external.galzy.eu.org/2022/%E5%BD%95%E5%88%B6_2022_10_14_19_15_36_715.mp4"
-                                        __idm_id__="6635521"></video>
+                                <div class="mdui-panel-item">
+                                    <div class="mdui-panel-item-header">
+                                        <div class="mdui-typo-title">1.下载拒绝访问、需要验证等</div>
+                                        <i
+                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                    </div>
+                                    <div class="mdui-panel-item-body">
+                                        <p>可尝试更新下载链接，下方视频（若视频无法打开，请挂代理及不要使用QQ浏览器）</p>
+                                        <div class="mdui-tab" mdui-tab id="tab">
+                                            <a href="#example1-pe1" class="mdui-ripple">电脑</a>
+                                            <a href="#example1-pe2" class="mdui-ripple">手机</a>
+                                        </div>
+                                        <div id="example1-pe1" class="mdui-p-a-2">
+                                            <video class="mdui-video-fluid imgziuiyk" controls="" display="inline-block"
+                                                src="https://external.galzy.eu.org/2022/%E5%BD%95%E5%88%B6_2022_10_14_19_15_36_715.mp4"
+                                                __idm_id__="6635522"></video>
+                                        </div>
+                                        <div id="example1-pe2" class="mdui-p-a-2">
+                                            <video class="mdui-video-fluid uupkuipw" controls="" display="inline-block"
+                                                src="https://external.galzy.eu.org/2022/Recorder_20221014192442_x264.mp4"
+                                                __idm_id__="6635522"></video>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div id="example1-pe2" class="mdui-p-a-2">
-                                    <video class="mdui-video-fluid uupkuipw" controls="" display="inline-block"
-                                        src="https://external.galzy.eu.org/2022/Recorder_20221014192442_x264.mp4"
-                                        __idm_id__="6635522"></video>
+                                <div class="mdui-panel-item">
+                                    <div class="mdui-panel-item-header">
+                                        <div class="mdui-typo-title">2.下载慢</div>
+                                        <i
+                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                    </div>
+                                    <div class="mdui-panel-item-body">
+                                        <p><strong>最简单的方式是使用IDM或其他多线程软件+挂代理/VPN下载</strong> </p>
+                                        <p><strong>下载多个文件出现下一个文件无法下载</strong>可尝试等待一会或清除浏览器缓存
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <h2 id="_3">下载慢</h2>
-                            <div class="mdui-shadow-2 mdui-p-a-2">
-                                <p><strong>最简单的方式是使用IDM或其他多线程软件+挂代理/VPN下载</strong> </p>
-                                <p><strong>下载多个文件出现下一个文件无法下载</strong>可尝试等待一会或清除浏览器缓存
-                                </p>
-                            </div>
-                            <h2 id="idm">IDM怎么使用</h2>
-                            <div class="mdui-shadow-2 mdui-p-a-2">
-                                <p>IDM软件的安装和使用请于<a
-                                        href="https://www.bilibili.com/">B站</a>搜索关键字<code>电脑/手机IDM使用</code>来了解
-                                </p>
-                                <blockquote>
-                                    <p>补充：电脑端科学上网下载需要设置IDM中代理选项为全局</p>
-                                </blockquote>
-                            </div>
-                            <h2 id="chrome">开启chrome多线程</h2>
-                            <div class="mdui-shadow-2 mdui-p-a-2">
-                                <p>如果你使用chrome下载，而你又因为特殊原因无法使用IDN和其他下载器，你也可以尝试开启多线程下载看看是否能下载得快点 </p>
-                                <p>在浏览器输入</p>
-                                <pre class="mdui-shadow-8 mdui-p-a-1">chrome://flags/#enable-parallel-downloading</pre>
-                                <p>将标黄选项Default（默认）改到Enabled（启动）即可</p>
-                                <img class="mdui-img-fluid imgziuiyk" alt="图片"
-                                    src="https://external.galzy.eu.org/2022/JerryYang.XYY@outlook.com/16599393081061659939287714.png">
-                                </p>
+                                <div class="mdui-panel-item">
+                                    <div class="mdui-panel-item-header">
+                                        <div class="mdui-typo-title">3.IDM怎么使用</div>
+                                        <i
+                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                    </div>
+                                    <div class="mdui-panel-item-body">
+                                        <p>IDM软件的安装和使用请于<a
+                                                href="https://www.bilibili.com/">B站</a>搜索关键字<code>电脑/手机IDM使用</code>来了解
+                                        </p>
+                                        <blockquote>
+                                            <p>补充：电脑端科学上网下载需要设置IDM中代理选项为全局</p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="mdui-panel-item">
+                                    <div class="mdui-panel-item-header">
+                                        <div class="mdui-typo-title">4.开启chrome多线程</div>
+                                        <i
+                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                    </div>
+                                    <div class="mdui-panel-item-body">
+                                        <p>如果你使用chrome下载，而你又因为特殊原因无法使用IDN和其他下载器，你也可以尝试开启多线程下载看看是否能下载得快点 </p>
+                                        <p>在浏览器输入</p>
+                                        <pre
+                                            class="mdui-shadow-8 mdui-p-a-1">chrome://flags/#enable-parallel-downloading</pre>
+                                        <p>将标黄选项Default（默认）改到Enabled（启动）即可</p>
+                                        <img class="mdui-img-fluid imgziuiyk" alt="图片"
+                                            src="https://external.galzy.eu.org/2022/JerryYang.XYY@outlook.com/16599393081061659939287714.png">
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </main>
@@ -127,11 +167,18 @@
 
     <!-- MDUI JavaScript -->
 
+    <script src="https://cdn.staticfile.org/lightgallery/2.7.0/lightgallery.umd.min.js"></script>
+    <!-- Or use the minified version -->
+    <script src="https://cdn.staticfile.org/lightgallery/2.7.0/lightgallery.min.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script src="https://cdn.staticfile.org/lightgallery/2.7.0/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+    <script src="https://cdn.staticfile.org/lightgallery/2.7.0/plugins/zoom/lg-zoom.umd.min.js"></script>
+
     <script src="//cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
     <script src="//cdn.staticfile.org/jquery/3.6.1/jquery.min.js"></script>
     <script src="//cdn.staticfile.org/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
     <script src="/access/JS/box.js"></script>
-    <script src="/access/JS/main.js"></script>
     <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
     <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
     <script src="//cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>

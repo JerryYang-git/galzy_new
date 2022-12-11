@@ -10,8 +10,13 @@
     <link rel="icon" href="//files.catbox.moe/5r4yu5.ico">
     <title>紫缘社|解压问题</title>
     <link rel="stylesheet" href="//cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" />
-    <link rel="stylesheet" href="/access/css/index.css">
+    <link rel="stylesheet" href="/access/css/index.min.css">
     <link rel="stylesheet" href="//cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css">
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lightgallery/2.7.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lightgallery/2.7.0/css/lg-zoom.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lightgallery/2.7.0/css/lg-thumbnail.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lightgallery/2.7.0/css/lightgallery-bundle.min.css">
 </head>
 
 <body class="mdui-theme-primary-orange">
@@ -45,40 +50,56 @@
                             <blockquote class="mdui-shadow-4 mdui-p-a-2">
                                 <p>下方文中软件均能在GalZY站点中搜寻到<br>所有的压缩包不需要更改后缀，电脑与手机都有对应的解压软件</p>
                             </blockquote>
-                            <h3 id="_2">压缩包损坏&amp;密码错误<a href="#_2" title="Permanent link">¶</a></h3>
-                            </svg></span> 一般是下面几种情况 </p>
-                            <ul>
-                                <li>电脑请使用7z或RAR解压(尽量使用7z)</li>
-                                <li>手机端请使用ZArchiver、RAR(不要执着于一个软件)</li>
-                                <li>请尽量使用网站认准的解压软件，确保解压码复制无隐藏字符或者空格导致解压失败</li>
-                                <li>可以使用记事本或者书签，输入网站解压码复制，然后到解压软件粘贴</li>
-                                <li><strong>资源大部分为分卷解压，请确保是否下载全部文件，相关教程B站可以搜索“分卷解压”</strong></li>
-                            </ul>
-                            <blockquote>
-                                <p><strong>注意</strong><br>
-                                    使用手机解压文件时。如果使用ZA解压器解压不成功，可以尝试使用Mt管理器或RAR管理器进行解压。<br>
-                                    华为手机关掉安全键盘才可以在ZA里输入中文<br>
-                                    如使用文档描述之外的软件解压，请更正，文档只基于常用的解压软件作为测试</p>
-                            </blockquote>
-                            <h3 id="001002">❔文件名带001、002…(分卷压缩)</h3>
-                            <blockquote>
-                                <p>这样的文件一般称为 <strong>分卷文件</strong><br>一种压缩方式，可以想象一个文件分为数份，而这些部分只有合在一起才是一个整体。<br>
-                                    通常文件后面带 001、002 或者 z01、z02……<br>
-                                    <strong>不同压缩方法分卷命名都不一样，但原理一样，请学会变通</strong>
-                                </p>
-                            </blockquote>
-                            <p>7z为：7z.001、7z.002……<br>
-                                RAR为：part001.rar、part002.rar……<br>
-                                不同压缩方法分卷命名都不一样，但原理一样，请学会变通
-                            </p>
-                            <h3 id="wim">wim格式</h3>
-                            <p class="mdui-p-a-1">此格式原为防止BD网盘和谐<br>
-                                💻电脑：右键使用7z打开，把内部的文件直接托出来即解压<br>
-                                📱手机：使用ZArchiverPro或MT管理器解压</p>
+
+                            <div class="mdui-panel mdui-panel-gapless mdui-panel-popout" id="mdui-panel">
+                                <div class="mdui-panel-item">
+                                    <div class="mdui-panel-item-header">
+                                        <div class="mdui-typo-title">1.压缩包损坏&amp;密码错误</div>
+                                        <i
+                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                    </div>
+                                    <div class="mdui-panel-item-body">
+                                        </span> 一般是下面几种情况 </p>
+                                        <ul>
+                                            <li>电脑请使用7z或RAR解压(尽量使用7z)</li>
+                                            <li>手机端请使用ZArchiver、RAR(不要执着于一个软件)</li>
+                                            <li>请尽量使用网站认准的解压软件，确保解压码复制无隐藏字符或者空格导致解压失败</li>
+                                            <li>可以使用记事本或者书签，输入网站解压码复制，然后到解压软件粘贴</li>
+                                            <li><strong>资源大部分为分卷解压，请确保是否下载全部文件，相关教程B站可以搜索“分卷解压”</strong></li>
+                                            <li>华为手机关掉安全键盘才可以在ZA里输入中文</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="mdui-panel-item">
+                                    <div class="mdui-panel-item-header">
+                                        <div class="mdui-typo-title">2.分卷压缩(文件名带001、002…)</div>
+                                        <i
+                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                    </div>
+                                    <div class="mdui-panel-item-body">
+                                        <p>这样的文件一般称为 <strong>分卷文件</strong><br>一种压缩方式，可以想象一个文件分为数份，而这些部分只有合在一起才是一个整体。<br>
+                                            通常文件后面带 001、002 或者 part001.rar、part002.rar……<br>
+                                            <strong>不同压缩方法分卷命名都不一样，但原理一样，请学会变通</strong>
+                                    </div>
+                                </div>
+
+
+                                <div class="mdui-panel-item">
+                                    <div class="mdui-panel-item-header">
+                                        <div class="mdui-typo-title">3.wim后缀</div>
+                                        <i
+                                            class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                                    </div>
+                                    <div class="mdui-panel-item-body">
+                                        <p class="mdui-p-a-1">此格式原为防止BD网盘和谐<br>
+                                            💻电脑：右键使用7z打开，把内部的文件直接托出来即解压<br>
+                                            📱手机：使用ZArchiverPro或MT管理器解压</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                </div>
             </main>
             <div class="rin-card-part" id="last">
                 <div class="rin-card-title2 mdui-text-color-grey-700">紫缘社</div>
@@ -110,11 +131,18 @@
 
     <!-- MDUI JavaScript -->
 
+    <script src="https://cdn.staticfile.org/lightgallery/2.7.0/lightgallery.umd.min.js"></script>
+    <!-- Or use the minified version -->
+    <script src="https://cdn.staticfile.org/lightgallery/2.7.0/lightgallery.min.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script src="https://cdn.staticfile.org/lightgallery/2.7.0/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+    <script src="https://cdn.staticfile.org/lightgallery/2.7.0/plugins/zoom/lg-zoom.umd.min.js"></script>
+
     <script src="//cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
     <script src="//cdn.staticfile.org/jquery/3.6.1/jquery.min.js"></script>
     <script src="//cdn.staticfile.org/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
     <script src="/access/JS/box.js"></script>
-    <script src="/access/JS/main.js"></script>
     <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
     <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
     <script src="//cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
