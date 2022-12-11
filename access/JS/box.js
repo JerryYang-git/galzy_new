@@ -21,7 +21,6 @@ window.onscroll = function () {
         document.documentElement.scrollTop ||
         window.pageYOffset ||
         document.body.scrollTop;
-    console.log(currentHeight, "currentHeight");
     if (currentHeight > 300) {
         document.getElementById('backtop').style.display = 'block'
     } else {
@@ -83,10 +82,13 @@ $(function () {
     })
 })
 
-// 通过 JavaScript 调用tab
-console.log();
-var tab = new mdui.Tab('#tab');
-// pjax后重载函数
-$(document).addEventListener('pjax:complete', function () {
-    tab();
-})
+
+// 通过 JavaScript 调用tab组件
+function pjax_reload() {
+    var tab = new mdui.Tab('#tab');
+}
+pjax_reload();
+// pjax后重载
+$(document).on('pjax:complete', function () {
+    pjax_reload();
+});
