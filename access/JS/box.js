@@ -7,6 +7,7 @@ function stateChangeIE(_frame) {
         _frame.style.visibility = "visible";
     }
 }
+
 function stateChangeFirefox(_frame) {
     var loader = document.getElementById("loading");
     var f = document.getElementById("whpj-box");
@@ -27,6 +28,7 @@ window.onscroll = function () {
         document.getElementById('backtop').style.display = 'none'
     }
 }
+
 function scrollToTop() {
     var topHeight =
         document.documentElement.scrollTop ||
@@ -59,16 +61,14 @@ xhr.send();
 
 // pjax
 $(function () {
-    $(document).pjax('#pjax-a', '#main',
-        {
-            fragment: '#main',
-            timeout: 8000
-        });
-    $(document).pjax('#pjax-b', '#helpmain',
-        {
-            fragment: '#helpmain',
-            timeout: 8000
-        });
+    $(document).pjax('#pjax-a', '#main', {
+        fragment: '#main',
+        timeout: 8000
+    });
+    $(document).pjax('#pjax-b', '#helpmain', {
+        fragment: '#helpmain',
+        timeout: 8000
+    });
     $(document)
         .on(
             'pjax:start', NProgress.start

@@ -11,7 +11,7 @@ body {
 }
 
 .page-bj {
-    background-image: url(https://files.catbox.moe/qlbpqq.png);
+    background-image: url(//files.catbox.moe/qlbpqq.png);
     background-size: 10%
 }
 
@@ -125,11 +125,11 @@ body {
     outline: 1px solid rgba(255, 184, 52, 0.48);
     height: 35px;
     border-radius: 5px;
-    background-image: url(https://files.catbox.moe/qlbpqq.png)
+    background-image: url(//files.catbox.moe/qlbpqq.png)
 }
 
 .wfziimg {
-    background-image: url(https://files.catbox.moe/kjab8k.png);
+    background-image: url(//files.catbox.moe/kjab8k.png);
     background-size: 200px;
     width: 200px;
     height: 33px;
