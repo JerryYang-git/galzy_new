@@ -90,13 +90,14 @@ function lightGalleryiuui() {
         speed: 500,
         // ... other settings
     });
-    lightGallery(document.getElementById('selector1'), {
+    lightGallery(document.getElementById('mdui-panel', 'selector1'), {
         selector: '.item',
         selector: '.item2',
+        selector: '.item3',
+        selector: '.item4',
     });
 }
-
-// 通过 JavaScript 调用tab组件
+// 通过 JavaScript 调用MDUI组件
 function pjax_reload() {
     var tab = new mdui.Tab('#tab');
     var tab2 = new mdui.Tab('#tab2');
