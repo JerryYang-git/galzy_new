@@ -2,96 +2,105 @@
     font-family: 'sjjiqianbi';
     src: url('/font/sjjiqianbi.woff2');
     font-weight: normal;
-    font-style: normal
+    font-style: normal;
 }
 
 body {
-    background-image: url(//catbox.moe/bgs/texture3.png);
-    font-family: sjjiqianbi, Helvetica, Arial, sans-serif
+    background-image: url(//files.catbox.moe/3e0kp0.jpg);
+    font-family: sjjiqianbi, Helvetica, Arial, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .page-bj {
-    background-image: url(//files.catbox.moe/qlbpqq.png);
-    background-size: 10%
+    background-image: url(//files.catbox.moe/tyxc8m.png);
+    background-size: 10%;
 }
 
 .rin-left {
     text-align: center;
-    margin: 20px auto auto auto
+    margin: 20px auto auto auto;
 }
 
 .rin-left-title {
     font-size: 25px;
-    padding-bottom: 2px
+    padding-bottom: 2px;
 }
 
 .rin-left-title2 {
     font-size: 15px;
-    margin-bottom: 8px
+    margin-bottom: 8px;
 }
 
 .rin-card {
+    /*margin: 20px 0;*/
     padding: 1px 9px;
-    background-color: rgba(0, 0, 0, 0)
+    /*padding-bottom:0;*/
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .rin-card-xuxmbiankuang {
     border: 2px dashed rgb(255, 186, 101);
-    outline: 1px solid rgba(255, 161, 19, 0.544)
+    outline: 1px solid rgba(255, 161, 19, 0.544);
 }
 
 .rin-card-content {
-    font-size: 12px
+    font-size: 12px;
 }
 
 #footer {
-    text-align: center
+    text-align: center;
 }
 
 #footer .rin-card-content {
     font-size: 12px;
-    opacity: .6
+    opacity: .6;
 }
 
 #footer div a {
     color: #ff0050;
     font-weight: 700;
     transition: all .3s;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .help-tab {
-    height: 40px
+    height: 40px;
+    position: fixed;
+    position: sticky;
+    top: 0px;
 }
 
 #last {
     text-align: center;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 .rin-card-title {
     font-size: 30px;
     color: rgb(0, 0, 0);
-    margin-bottom: 15px
+    margin-bottom: 15px;
 }
 
 .rin-card-title2 {
     font-size: 20px;
     color: rgb(0, 0, 0);
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 #last .rin-card-title2 {
     letter-spacing: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 #last .rin-card-content {
     font-size: 12px;
     letter-spacing: 1em;
-    opacity: .5
+    opacity: .5;
 }
 
+
+/* 页面滚动条 */
 ::-webkit-scrollbar {
     width: 4px
 }
@@ -109,15 +118,16 @@ body {
 }
 
 .about-body {
-    background-color: transparent
+    background-color: transparent;
 }
 
 .hezibjse {
-    background-color: rgb(255 230 122 / 8%)
+    background-color: rgb(255 230 122 / 8%);
+    backdrop-filter: blur(5px);
 }
 
 .juvs {
-    text-align: center
+    text-align: center;
 }
 
 .uhbmkl {
@@ -125,7 +135,7 @@ body {
     outline: 1px solid rgba(255, 184, 52, 0.48);
     height: 35px;
     border-radius: 5px;
-    background-image: url(//files.catbox.moe/qlbpqq.png)
+    background-image: url(//files.catbox.moe/tyxc8m.png);
 }
 
 .wfziimg {
@@ -133,7 +143,7 @@ body {
     background-size: 200px;
     width: 200px;
     height: 33px;
-    margin: -10px
+    margin: -10px;
 }
 
 .wfziimg-z {
@@ -142,229 +152,255 @@ body {
     animation-duration: 0.5s;
     animation-iteration-count: 1;
     animation-delay: 1s;
-    animation-fill-mode: forwards
+    animation-fill-mode: forwards;
 }
 
 .wfziimg-1 {
-    animation-name: top1
+    animation-name: top1;
 }
 
 .wfziimg-2 {
-    animation-name: top2
+    animation-name: top2;
 }
 
 .wfziimg-3 {
-    animation-name: top3
+    animation-name: top3;
 }
 
 .wfziimg-4 {
-    animation-name: top4
+    animation-name: top4;
 }
 
 .wfziimg-xx {
-    margin-top: -20px
+    margin-top: -20px;
 }
 
+/* Chrome, Safari, Opera */
 @-webkit-keyframes top1 {
+
     from {
         top: -40px;
-        left: -40px
+        left: -40px;
     }
 
     to {
         top: 2px;
-        left: 0px
+        left: 0px;
     }
 }
 
+/* Standard syntax */
 @keyframes top1 {
+
     from {
         top: -40px;
-        left: -40px
+        left: -40px;
     }
 
     to {
         top: 2px;
-        left: 0px
+        left: 0px;
     }
 }
 
+
+/* Chrome, Safari, Opera */
 @-webkit-keyframes top2 {
+
     from {
         top: -40px;
-        right: -40px
+        right: -40px;
     }
 
     to {
         top: 2px;
-        right: 0px
+        right: 0px;
     }
 }
 
+/* Standard syntax */
 @keyframes top2 {
+
     from {
         top: -40px;
-        right: -40px
+        right: -40px;
     }
 
     to {
         top: 2px;
-        right: 0
+        right: 0;
     }
 }
 
+
+/* Chrome, Safari, Opera */
 @-webkit-keyframes top3 {
+
     from {
         bottom: -40px;
-        right: -40px
+        right: -40px;
     }
 
     to {
         bottom: 2px;
-        right: 0px
+        right: 0px;
     }
 }
 
+/* Standard syntax */
 @keyframes top3 {
+
     from {
         bottom: -40px;
-        right: -40px
+        right: -40px;
     }
 
     to {
         bottom: 2px;
-        right: 0
+        right: 0;
     }
 }
 
+
+
+/* Chrome, Safari, Opera */
 @-webkit-keyframes top4 {
+
     from {
         bottom: -40px;
-        left: -40px
+        left: -40px;
     }
 
     to {
         bottom: 2px;
-        left: 0px
+        left: 0px;
     }
 }
 
+/* Standard syntax */
 @keyframes top4 {
+
     from {
         bottom: -40px;
-        left: -40px
+        left: -40px;
     }
 
     to {
         bottom: 2px;
-        left: 0
+        left: 0;
     }
 }
 
-@media (max-width:599px) {
+/* /* 选项栏  */
+@media (max-width: 599px) {
+
     .uupkuipw {
-        width: 40%
+        width: 40%;
     }
 
     .imgziuiyk {
-        width: 100%
+        width: 100%;
     }
 
     .bntilj {
-        width: 70%
+        width: 70%;
     }
 
     .wfziimg-z {
-        width: 30%
+        width: 30%;
     }
 
     #whpj-box {
         width: 100%;
-        height: 620px
+        height: 620px;
     }
 }
 
-@media (min-width:600px) and (max-width:1023px) {
+@media (min-width: 600px) and (max-width: 1023px) {
+
     .uupkuipw {
-        width: 30%
+        width: 30%;
     }
 
     .imgziuiyk {
-        width: 80%
+        width: 80%;
     }
 
     .bntilj {
-        width: 60%
+        width: 60%;
     }
 
     .wfziimg-z {
-        width: 20%
+        width: 20%;
     }
 
     #whpj-box {
         width: 100%;
-        height: 800px
+        height: 800px;
     }
 }
 
-@media (min-width:1024px) and (max-width:2499px) {
+@media (min-width: 1024px) and (max-width: 2499px) {
+
     .uupkuipw {
-        width: 15%
+        width: 15%;
     }
 
     .imgziuiyk {
-        width: 50%
+        width: 50%;
     }
 
     .bntilj {
-        width: 30%
+        width: 30%;
     }
 
     .wfziimg-z {
-        width: 10%
+        width: 10%;
     }
 
     #whpj-box {
         width: 100%;
-        height: 615px
+        height: 615px;
     }
 }
 
-@media (min-width:2560px) and (max-width:4096px) {
+@media (min-width: 2560px) and (max-width: 4096px) {
     .uupkuipw {
-        width: 20%
+        width: 20%;
     }
 
     .imgziuiyk {
-        width: 55%
+        width: 55%;
     }
 
     .bntilj {
-        width: 20%
+        width: 20%;
     }
 
     .wfziimg-z {
-        width: 5%
+        width: 5%;
     }
 
     #whpj-box {
         width: 100%;
-        height: 1000px
+        height: 1000px;
     }
 }
+
+/* 滚动停留 */
 
 .fixedElement {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 100
+    z-index: 100;
 }
 
 #qq {
     width: 100%;
-    height: 485px
+    height: 485px;
 }
 
 .mdui-panel-item {
-    background-color: #fffefb38
+    background-color: #fffefb38;
 }
